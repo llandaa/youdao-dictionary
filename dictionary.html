@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script type="text/javascript">
+			document.querySelector('html').style.fontSize = document.documentElement.clientWidth / 6 + "px";
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/dictionary.css" />
+	</head>
+
+	<body onload="loaded()">
+		<header>
+			<div id="homehead" class="head active">
+				<ul class="display-box box-orient-h">
+					<li class="box-flex-1 homeci active btn">词典</li>
+					<li class="box-flex-1  btn">百科</li>
+					<li class="box-flex-1 homefan btn">翻译</li>
+					<li class="box-flex-1 btn">发现</li>
+					<li class="box-flex-1 btn">我的</li>
+				</ul>
+			</div>
+			<div id="wordhead" class="head ">
+				<ul class="display-box box-orient-h ">
+					<li class="box-flex-1 backshang">
+						<i class="icon-xiangzuo iconfont"></i>
+					</li>
+					<li class="box-flex-2">
+						<p class="fl">所有单词</p>
+						<i class="icon-xiasanjiao iconfont fl"></i>
+					</li>
+					<li class="box-flex-1">
+						<p>同步</p>
+					</li>
+				</ul>
+			</div>
+			<div id="cardhead" class="head ">
+				<ul class="clearfix">
+					<li class="fl">
+						<i class="icon-xiasanjiao iconfont backcard"></i>
+					</li>
+					<li class="fr">
+						<i class="icon-shezhi iconfont fr"></i>
+						<i class="icon-search iconfont fr"></i>
+						<i class="icon-fenxiang iconfont fr"></i>
+						<i class="icon-yuyin iconfont fr"></i>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<section>	
+			<div class="picfix">
+				<div class="picfixbox">
+					<div class="picfixcon fl">
+						<i class="icon-fuwushuji fl iconfont"></i>
+						<p class="fl">有声美文</p>
+					</div>
+					<div class="picfixcon fl">
+						<i class="icon-yinle fl iconfont"></i>
+						<p class="fl">动听音乐</p>
+					</div>
+					<div class="picfixcon fl">
+						<i class="icon-bofang fl iconfont"></i>
+						<p class="fl">双语悦读</p>
+					</div>
+					<div class="picfixcon fl">
+						<i class="icon-dengpao fl iconfont"></i>
+						<p class="fl">英语视频</p>
+					</div>
+					<div class="picfixcon fl">
+						<i class="icon-quanzi fl iconfont"></i>
+						<p class="fl">圈子</p>
+					</div>
+					<div class="picfixcon fl">
+						<i class="icon-gengduo fl iconfont"></i>
+						<p class="fl">更多</p>
+					</div>
+				</div>
+			</div>
+			<div class="sectionnav">
+				<div class="sectionbox">
+					<div class="head">
+						<i class="icon-yun iconfont"></i>
+						<p>正在努力加载。。。</p>
+					</div>
+					<div id="dictSecion" class="content active">
+						<div class="dictSectionbox">
+							<ul>
+								<li class="swiper-container">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide" style="background-image:url(img/banner1.png)"></div>
+										<div class="swiper-slide" style="background-image:url(img/banner2.png)"></div>
+										<div class="swiper-slide" style="background-image:url(img/banner3.png)"></div>
+										<div class="swiper-slide" style="background-image:url(img/banner4.png)"></div>
+									</div>
+									<div class="swiper-pagination"></div>
+								</li>
+								<li class="searchhome">
+									<i class="icon-xiangji iconfont"></i>
+									<input type="search" class="homesearch" value="在此输入要翻译的文本" />
+									<p>/</p>
+								</li>
+								<li class="pictxt">
+									<div class="pictxtbox">
+										<div class="pictxtcon fl">
+											<i class="icon-fuwushuji fl iconfont"></i>
+											<p class="fl">有声美文</p>
+										</div>
+										<div class="pictxtcon fl">
+											<i class="icon-yinle fl iconfont"></i>
+											<p class="fl">动听音乐</p>
+										</div>
+										<div class="pictxtcon fl">
+											<i class="icon-bofang fl iconfont"></i>
+											<p class="fl">双语悦读</p>
+										</div>
+										<div class="pictxtcon fl">
+											<i class="icon-dengpao fl iconfont"></i>
+											<p class="fl">英语视频</p>
+										</div>
+										<div class="pictxtcon fl">
+											<i class="icon-quanzi fl iconfont"></i>
+											<p class="fl">圈子</p>
+										</div>
+										<div class="pictxtcon fl">
+											<i class="icon-gengduo fl iconfont"></i>
+											<p class="fl">更多</p>
+										</div>
+									</div>
+								</li>
+								<li class="clearfix">
+									<img src="img/pic1.png" alt="" class="fl lazy" data-original="img/pic1.png" />
+									<div class="txtright fl">
+										<p class="title">雨和水的故事：我的泪在你心里，你却看不到</p>
+										<span class="laizi clearfix">
+										<p class="fl">双语悦读</p>
+										<i class="icon-dianzan iconfont fl" ></i>
+										<b class="num fl">91</b>
+									</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<img src="img/pic2.png" alt="" class="fl lazy" data-original="img/pic2.png" />
+									<div class="txtright fl">
+										<p class="title">意大利青年的肺腑之言：其实我是这样学英语的</p>
+										<span class="laizi clearfix">
+										<p class="fl">实用英语</p>
+										<i class="icon-dianzan iconfont fl"></i>
+										<b class="num fl">182</b>
+									</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<img src="img/audio3.png" alt="" class="fl lazy" data-original="img/pic2.png" />
+									<div class="txtright fl">
+										<p class="title ellipsis-2">一句来自大不列颠的魔性方言发音，字幕组全体阵忘...</p>
+										<span class="laizi clearfix">
+										<p class="fl">老外看东西</p>
+										<i class="icon-dianzan iconfont fl"></i>
+										<b class="num fl">43</b>
+										<div class="fangkuang fl">视频</div>
+										<i class="icon-xiasanjiao iconfont fr"></i>
+									</span>
+									</div>
+								</li>
+								</li>
+								<li class="clearfix">
+									<img src="img/audio2.png" alt="" class="fl lazy" data-original="img/pic2.png" />
+									<div class="txtright fl">
+										<p class="title">沉浸在英语环境，口语突飞猛进，马上免费体验</p>
+										<span class="laizi clearfix">
+										<i class="fl">广告</i>
+									</span>
+									</div>
+								</li>
+								<li>
+									<video src="video/movie.mp4" class="video1" width="100%" height="140px" muted>
+										当前浏览器不支持 video直接播放，点击这里下载视频：
+										<a href="myvideo.webm">下载视频</a>
+									</video>
+								</li>
+								<li class="clearfix">
+									<img src="img/audio7.png" alt="" class="fl lazy" data-original="img/pic2.png" />
+									<div class="txtright fl">
+										<p class="title">亚洲空气污染最严重，但并非中国第一</p>
+										<span class="laizi clearfix">
+										<p class="fl">商务英语</p>
+										<i class="icon-dianzan iconfont fl"></i>
+										<b class="num fl" style="margin-right:1.4rem">18</b>
+										<i class="icon-xiasanjiao iconfont fr"></i>
+									</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<img src="img/audio10.png" alt="" class="fl lazy" data-original="img/pic2.png" />
+									<div class="txtright fl">
+										<p class="title">读写训练营:蓝瘦香菇的时候就大声哭出来吧</p>
+										<span class="laizi clearfix">
+										<p class="fl" style="margin-right:2.15rem">圈子精选</p>
+										<i class="icon-xiasanjiao iconfont fr"></i>
+									</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<img src="img/audio11.png" alt="" class="fl lazy" data-original="img/pic2.png" />
+									<div class="txtright fl">
+										<p class="title">免费留学参与:州长邀您当大使、吃喝全包送</p>
+										<p style="font-size:14px;color:#aaa;margin-top:15px;margin-bottom:5px">填表留学提问>即获抽奖资格</p>
+									</div>
+								</li>
+								<li>
+									<div class="pictop">
+										<p class="fl">随手就能学会的考研六级核心词汇</p>
+										<div class="fr">精选</div>
+									</div>
+									<img src="img/audio12.png" />
+									<div class="picbottom clearfix">
+										<b class="fr">85</b>
+										<i class="icon-dianzan fr iconfont"></i>
+									</div>
+								</li>
+								<li class="clearfix">
+									<img src="img/audio13.png" alt="" class="fl lazy" data-original="img/pic2.png" />
+									<div class="txtright fl">
+										<p class="title">自从有了考神，过四六级都不算事..</p>
+										<span class="laizi clearfix">
+										<p class="fl" style="margin-right:1.8rem">有道精品课程</p>
+										<i class="icon-xiasanjiao iconfont fl"></i>
+									</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<img src="img/audio2.png" alt="" class="fl lazy" data-original="img/pic2.png" />
+									<audio src="video/buzai.mp3"></audio>
+									<i class="icon-bofang2 iconfont"></i>
+									<i class="icon-iconfontcolor96 iconfont"></i>
+									<div class="txtright fl">
+										<p class="title">情比金坚，但情归何处？</p>
+										<span class="laizi clearfix" style="margin-top:1rem">
+										<p class="fl" style="margin-right:0.5rem">动听音乐</p>
+										<div class="fl music">音频</div>
+										<i class="icon-xiasanjiao iconfont fl"></i>
+									</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<img src="img/audio15.png" alt="" class="fl lazy" data-original="img/pic2.png" />
+									<div class="txtright fl">
+										<p class="title">他是世间最美的烟火，他把每段人生都活成了传奇</p>
+										<span class="laizi clearfix">
+										<p class="fl" style="margin-right:2.15rem">来翻译吧</p>
+										<i class="icon-xiasanjiao iconfont fr"></i>
+									</span>
+									</div>
+								</li>
+								<li>
+									不要再往下翻啦，木有东西啦！
+								</li>
+							</ul>
+						</div>
+						<a class="icon-xiangshangyuanjiantou iconfont backtop" href="javascript:myScroll.scrollToElement(document.querySelector('#dictSecion li:nth-child(1)'), null, null, true)"></a>
+						<div class="searchfix">
+							<i class="icon-xiangji iconfont"></i>
+							<input type="search" class="homesearch" value="在此输入要翻译的文本" />
+							<p>/</p>
+						</div>
+					</div>
+					<div id="encySecion" class="content active ">
+						<div class="encySectionbox">
+							<ul>
+								<li>
+									<input type="text" value="搜索百科" />
+									<i class="icon-search iconfont"></i>
+								</li>
+								<li>
+									<div class="pictop clearfix">
+										<div class="redbox fl"></div>
+										<p class="pictitle fl">百科今日关注</p>
+									</div>
+									<div class="pic">
+										<img src="img/pic4.png" />
+									</div>
+									<div class="picbottom">
+										<img src="img/pic5.png" class="fl" />
+										<div class="bottomtitle fl">
+											<dl>
+												<dt>极速5厘米</dt>
+												<dd>是新海城创作的动画佳作，剧情动人，画面精致。</dd>
+											</dl>
+										</div>
+									</div>
+								</li>
+								<li>
+									<img src="img/pic6.png" class="fl" />
+									<div class="bottomtitle fl">
+										<dl>
+											<dt>711</dt>
+											<dd>原是美国一个众所周知的便利店集团，后被日本人的主要零售商伊藤杨华唐引入...</dd>
+										</dl>
+									</div>
+								</li>
+								<li>
+									<img src="img/pic7.png" class="fl" />
+									<div class="bottomtitle fl">
+										<dl>
+											<dt>便利店的兴起</dt>
+											<dd>便利店的兴起源于超市的大型化与郊外化</dd>
+										</dl>
+									</div>
+								</li>
+								<li>
+
+								</li>
+								<li>
+									<div class="txttop">
+										<div class="fl"></div>
+										<p class="fl">热点排行榜</p>
+									</div>
+									<div class="txtbottom">
+										<div class="left fl">
+											<fieldset>
+												<legend>
+													<div>1</div>
+												</legend>
+												<p>美国大选</p>
+											</fieldset>
+											<fieldset>
+												<legend>
+													<div>2</div>
+												</legend>
+												<p>裸条</p>
+											</fieldset>
+											<fieldset>
+												<legend>
+													<div>3</div>
+												</legend>
+												<p>安吉丽娜.朱莉</p>
+											</fieldset>
+										</div>
+										<div class="right fr">
+											<fieldset>
+												<legend>
+													<div>4</div>
+												</legend>
+												<p>熊戴琳</p>
+											</fieldset>
+											<fieldset>
+												<legend>
+													<div>5</div>
+												</legend>
+												<p>吴莎</p>
+											</fieldset>
+											<fieldset>
+												<legend>
+													<div>6</div>
+												</legend>
+												<p>碧瑶坐</p>
+											</fieldset>
+										</div>
+									</div>
+								</li>
+								<li>
+								</li>
+								<li>
+									<div class="pictop">
+										<div class="fl"></div>
+										<p>未曾了解的趣味</p>
+									</div>
+									<div class="pic">
+										<div class="left fl">
+											<div class="topbox1">
+												<img src="img/pic13.png" />
+												<p>一份让大家看了都会水逆的星座报告</p>
+											</div>
+											<div class="topbox2">
+												<img src="img/pic14.png" />
+												<p>多吃蔬菜水果能减肥，这些减肥规则迷惑人</p>
+											</div>
+										</div>
+										<div class="right fl">
+											<div class="topbox1">
+												<img src="img/pic15.png" />
+												<p>年轻人为什么总用“狗”自黑</p>
+											</div>
+											<div class="topbox2">
+												<img src="img/pic16.png" />
+												<p>为什么你玩手机停不下来</p>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div id="tranSecion" class="content active">
+						<div class="tranSectionbox">
+							<div class="trans">
+								<div class="transtop">
+									<p class="fl yuyan">语言自动检测</p>
+									<div class="linexie"></div>
+									<p class="fl fanyi">翻译</p>
+									<i class="fl icon-xiangyou iconfont"></i>
+								</div>
+								<div class="transbottom">
+									<textarea name="" rows="4" cols="">在此输入要翻译的文本</textarea>
+									<i class="icon-guanbi iconfont"></i>
+								</div>
+							</div>
+							<div class="transfanyi">
+								<p class="yiwen">译文</p>
+								<p class="eng"></p>
+								<div class="line"></div>
+								<p class="gengduo">更多释义</p>
+								<p class="gengduoeng"></p>
+							</div>
+							<div class="transsave">
+							</div>
+						</div>
+					</div>
+					<div id="findSecion" class="content active">
+						<div class="findSectionbox">
+							<ul>
+								<li class="display-box box-orient-h">
+									<div class="box-flex-1 danciben">
+										<i class="icon-ciku iconfont" style="color: #ff626e"></i>
+										<p>单词本</p>
+									</div>
+									<div class="box-flex-1" style="padding-top:4%">
+										<i class="icon-fanyi iconfont" style="color: #f8a800"></i>
+										<p style="margin-top:0.15rem;">人工翻译</p>
+									</div>
+									<div class="box-flex-1" style="padding-top:7%">
+										<i class="icon-xinshouxuetang iconfont" style="font-size:3.6em;color: #3ccbb5;"></i>
+										<p style="margin-top:0.05rem;">学堂</p>
+									</div>
+								</li>
+								<li class="clearfix">
+									<div class="left fl">
+										<div class="iconbg">
+											<div class="icon-quanzi1 iconfont"></div>
+										</div>
+										<div class="line1"></div>
+										<div class="rect1"></div>
+										<div class="line2"></div>
+										<div class="rect2"></div>
+									</div>
+									<div class="right fr">
+										<dl>
+											<dd class="clearfix">
+												<p class="fl">圈子</p>
+												<i class="icon-xiangyou1 iconfont fr"></i>
+												<div class="fr">2</div>
+											</dd>
+											<dd>
+												<p>#早读打卡#2016.10.22-因祸得福</p>
+											</dd>
+											<dd>
+												<p class="ellipsis">souvenir纪念品，逻辑含义往往就是“往事涌上心头”</p>
+											</dd>
+										</dl>
+									</div>
+								</li>
+								<li>
+									<dl>
+										<dd>
+											<div class="iconbg fl">
+												<div class="icon-ci iconfont animated bounce"></div>
+											</div>
+											<p class="fl">云单词</p>
+											<i class="icon-xiangyou1 iconfont fr"></i>
+										</dd>
+										<dd class="clearfix">
+											<div class="iconbg fl">
+												<div class="icon-geren iconfont animated flash"></div>
+											</div>
+											<p class="fl">用户福利</p>
+											<p class="txt fl">好礼天天有，就等你来拿</p>
+
+											<i class="icon-xiangyou1 iconfont fr"></i>
+											<div class="rect5 fr"></div>
+										</dd>
+										<dd class="clearfix">
+											<div class="iconbg fl">
+												<div class="icon-tushub iconfont animated pulse"></div>
+											</div>
+											<p class="fl">云图书</p>
+											<i class="icon-xiangyou1 iconfont fr"></i>
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dd class="clearfix">
+											<img src="img/piv.png" alt="" class="fl" />
+											<p class="fl biantxt active">Believe in yourself</p>
+											<i class="icon-xiangyou1 iconfont fr"></i>
+											<div class="guan fr">励志</div>
+										</dd>
+
+										<dd class="clearfix">
+											<div class="iconbg fl">
+												<div class="icon-icon1 iconfont animated flip"></div>
+											</div>
+											<p class="fl">活动中心</p>
+											<i class="icon-xiangyou1 iconfont fr"></i>
+										</dd>
+										<dd class="clearfix">
+											<div class="iconbg fl">
+												<div class="icon-caidan1 iconfont animated rotateIn"></div>
+											</div>
+											<p class="fl">有道家族</p>
+											<i class="icon-xiangyou1 iconfont fr"></i>
+											<p class="txt fr">有道良心出品APP</p>
+										</dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div id="mySecion" class="content active">
+						<div class="mySectionbox">
+							<div class="canvasbox">
+								<canvas id="canvas" width="320" height="250"></canvas>
+								<p class="title">我的英语世界</p>
+								<p class="txt">立即开启</p>
+							</div>
+							<dl class="one">
+								<dd class="clearfix">
+									<div class="iconbg fl">
+										<div class="icon-geren iconfont animated rotateInDownLeft"></div>
+									</div>
+									<p class="fl">登录/注册</p>
+									<i class="icon-xiangyou1 iconfont fr"></i>
+								</dd>
+								<dd class="clearfix">
+									<div class="iconbg fl">
+										<div class="icon-icon3 iconfont animated bounceInRight"></div>
+									</div>
+									<p class="fl">消息中心</p>
+
+									<i class="icon-xiangyou1 iconfont fr"></i>
+
+								</dd>
+								<dd class="clearfix">
+									<div class="iconbg fl">
+										<div class="icon-gerenzhuye iconfont animated fadeInUpBig"></div>
+									</div>
+									<p class="fl">个人主页</p>
+									<i class="icon-xiangyou1 iconfont fr"></i>
+								</dd>
+							</dl>
+							<dl class="two">
+								<dd class="clearfix">
+									<div class="iconbg fl">
+										<div class="icon-shezhi iconfont animated bounceInDown"></div>
+									</div>
+									<p class="fl">基本设置</p>
+									<i class="icon-xiangyou1 iconfont fr"></i>
+								</dd>
+							</dl>
+							<dl class="three">
+								<dd class="clearfix">
+									<div class="iconbg fl">
+										<div class="icon-anonymous-iconfont1 iconfont animated rollIn"></div>
+									</div>
+									<p class="fl">满意度调查</p>
+									<i class="icon-xiangyou1 iconfont fr"></i>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div id="wordSecion" class="content active">
+						<div class="wordSectionbox">
+							<ul class="display-box box-orient-h one">
+								<li class="box-flex-1 cardstudy">
+									<div class="boxbg">
+										<i class="fl icon-card iconfont"></i>
+										<p>卡片学习</p>
+									</div>
+								</li>
+								<li class="box-flex-1">
+									<div class="boxbg">
+										<i class="fl icon-fu iconfont"></i>
+										<p>复习检测</p>
+									</div>
+								</li>
+							</ul>
+							<ul class="clearfix two">
+								<li class="fl">共4词，0词已加入复习计划</li>
+								<li class="fl" style="margin-left:0.1em">编辑</li>
+								<li class="fl">设置</li>
+							</ul>
+							<div class="three">
+								<div class="D">
+									<p class="d">D</p>
+									<div class="dchild">
+										<p>大</p>
+										<pre>big large great huge</pre>
+									</div>
+								</div>
+								<div class="D">
+									<p class="d">N</p>
+									<div class="dchild">
+										<p>你好</p>
+										<pre>hello hi</pre>
+									</div>
+								</div>
+								<div class="D">
+									<p class="d">X</p>
+									<div class="dchild">
+										<p>小</p>
+										<pre>little small young tiny micro</pre>
+									</div>
+								</div>
+								<div class="D">
+									<p class="d">Z</p>
+									<div class="dchild">
+										<p>中</p>
+										<pre>center middle China in medium</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="cardSecion" class="content active">
+						<div class="cardSectionBox">
+							<ul>
+								<li class="big" id="big">
+									<p class="title">大</p>
+									<p class="txtnum">1/4</p>
+								</li>
+								<li class="hello">
+									<p class="title">你好</p>
+									<p class="txtnum">2/4</p>
+								</li>
+								<li class="small">
+									<p class="title">小</p>
+									<p class="txtnum">3/4</p>
+								</li>
+								<li class="midle">
+									<p class="title">中</p>
+									<p class="txtnum">4/4</p>
+								</li>
+							</ul>
+							<a class="study"  href="javascript:myScroll.scrollToElement(document.querySelector('.small'), null, null, true)">
+							Study Again
+							</a>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--<footer></footer>-->
+		<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/iscroll.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/iscroll-probe.js"></script>
+		<script src="js/swiper.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.easing.1.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.lazyload.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/dictionary.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>
